@@ -176,6 +176,9 @@ main .glide__arrow:hover {
   max-width: 100%;
   max-height: 100%;
 }
+.gradient-container h2 {
+  font-size: 2.4em;
+}
 
 /* full size canvas */
 #gradient-canvas {

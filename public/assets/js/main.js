@@ -45,8 +45,6 @@ document.getElementById('myform').addEventListener('submit', function(e) {
     }
 });
 
-
-
 /*carousel/glide*/ 
 document.addEventListener("DOMContentLoaded", function () {
     new Glide('.glide', {
