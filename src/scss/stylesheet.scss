@@ -1,0 +1,661 @@
+
+// text/element colours //
+$twhite: #ffffff; // white text colour //
+$hblack: #111111; // black text/hover colour//
+$hblue: #35c4ce; // blue text/hover colour //
+$horange: #c05037;
+
+// padding - padding sizes //
+$psmall: 20px 0;  
+$pmed: 30px 0;   
+$plarge: 50px;  
+
+
+/* font families*/
+$ffpoppin:  "Poppins", sans-serif;
+$ffplayfair: "Playfair Display", serif;
+
+
+/* font weight*/
+$fsmall: 200;
+$fmedium: 400;  
+$flarge: 900;   
+
+
+// @MIXIN //
+@mixin flex-center($direction: row, $wrap: nowrap) {  // Makes flex/center/center/wrap/ into one//
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* text title size mobile*/
+@mixin ttsize {
+    font-size: 20px;
+    text-align: left;
+    margin: 0px 0px 30px 0px;
+    line-height: 1.4;
+
+}
+/* text tile size web*/
+@mixin ttsize-w {
+    font-size: 30px;
+    text-align: left;
+}
+/* body copy size mobile*/
+@mixin body-copy {
+    font-size: 12px;
+    text-align:left;
+    line-height: 1.6;
+}
+/* body copy size web*/
+@mixin body-copy-w {
+    font-size: 18px;
+    text-align: justify;
+
+}
+
+
+.container {
+    width: 94%;
+    margin: 0 auto;
+    padding-bottom: 3em;
+
+}
+
+/* header and main nav */ 
+header {
+    background-image: url(/assets/images/headerimg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 15em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+    #burger-menu {
+        color: $twhite;
+        @include flex-center;
+        justify-content: space-between;
+        padding: 2em 1em 1em 1em;
+
+        div {
+            i {
+                margin-left: 15px;
+            }
+        }
+    }
+
+    nav {
+        ul {
+            display: none;
+        }
+    }
+
+    .top-logo {
+        @include flex-center;
+
+        a {
+            img {
+                padding: 5em 0;
+                margin-top: 10em;
+                width: 60vw;
+            }
+        }
+    }
+}
+
+main {
+    width: 100%;
+
+    // js map
+    #destination-map {
+        padding: $pmed;
+        @include flex-center;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-evenly;
+
+        div {
+            justify-content: center;
+            align-items: center;
+        }
+        p {
+            background-color: #c05037;
+            padding: 10px 7px;
+            @include ttsize;
+            border-radius: 15px;
+            font-family: $ffpoppin;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        #map {
+            height: 40vh;
+            width: 85vw;
+            border-radius: 15px;
+        }
+    }
+
+    input {
+        &.parsley-error {
+            border: 2px solid red;
+        }
+
+        &.parsley-success {
+            border: 2px solid green;
+        }
+    }
+
+    .parsley-errors-list {
+        color: red;
+        font-size: 14px;
+    }
+
+    .glide {
+        width: 80%;
+        margin: auto;
+        padding: 0 0 5em 0;
+
+        &__slides {
+            text-align: center;
+        }
+
+        &__slide {
+            img {
+                width: 100%;
+                max-width: 350px;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+            }
+
+            figcaption {
+                font-size: 15px;
+                font-family: $ffpoppin;
+                margin-top: 10px;
+            }
+        }
+
+        &__arrows {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        &__arrow {
+            background: rgba(0, 0, 0, 0.5);
+            color: $twhite;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 5px;
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.8);
+            }
+        }
+    }
+}
+
+ /* offer section */
+#offer-section {
+    padding: $pmed;
+    @include flex-center;
+    article {
+        width: 80%;
+        font-family: $ffpoppin;
+        
+        h1 {
+            @include ttsize;}
+            margin: 0px 0px 30px 0px;
+            line-height: 1.4;
+            span {
+                color: $horange;
+                font-weight: $fmedium;
+            }
+        p {
+        @include body-copy;
+        margin-top: 20px;
+
+        }
+        p::first-letter{
+            font-size: 18px;
+        }
+    }
+    
+} 
+ /*granim gradient*/
+
+/* Style for full-page gradient background */
+.gradient-container {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Full viewport height */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* full size canvas */
+#gradient-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    opacity: 50%;
+    z-index: -1; /* Sends canvas behind text  :P*/
+}
+
+/* gradient canvas text */
+.gradient-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-wrap: wrap;
+    font-size: 3rem; /* Adjust text size */
+    font-weight: $fmedium;
+    line-height: 1.3;
+    font-family: $ffplayfair;
+    color: $twhite;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+}
+.lottie-animation {
+    top: 90%;
+    left: 50%;
+    height: 80%;
+}
+/*testimonial section*/
+#testimonial {
+    padding: $pmed;
+    @include flex-center;
+    flex-wrap: wrap;
+    background-color: #ffd88f31;
+    width: 100vw;
+    height: 100vh;
+    border-bottom: solid 2px $hblue;
+    h3 {
+        @include ttsize;
+        font-family: $ffpoppin;
+        span {
+            color: $horange;
+        }
+    }
+    figure { 
+        @include flex-center;
+        flex-wrap: wrap;
+        #customer-img {
+            width: 85%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    
+    
+        }
+        figcaption {
+            font-family: $ffplayfair;
+            font-size: 0.8rem;
+            margin: 15px 0px;
+            font-style: italic;
+
+        }
+
+        #test-text {padding-top: 30px;
+            h4 {
+                @include ttsize;
+            }
+
+        }
+    }
+  
+    article {
+        width: 80%;
+        font-family: $ffpoppin;
+        
+        h1 {
+            @include ttsize;}
+            margin: 0px 0px 30px 0px;
+            line-height: 1.4;
+            span {
+                color: $horange;
+                font-weight: $fmedium;
+            }
+        p {
+        @include body-copy;
+        margin-top: 20px;
+      }
+      p::first-letter{
+        font-size: 18px;
+    }
+      #stars {
+        width: 5%;
+        @include flex-center;
+        margin: 4% 0 0 18%;
+        color: $hblue;
+        li {
+            margin-right: 5px;
+        }
+      }
+    }
+}
+
+#perks {
+    padding: $pmed;
+    @include flex-center;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    h5 {
+        @include ttsize;
+        font-family: $ffpoppin;
+    }
+    div {
+        @include flex-center;
+        flex-wrap: wrap;
+        .perk-container {
+            width: 10rem;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+            padding: 1rem;
+            height: 16rem;
+           @include flex-center;
+            text-align: center;
+            gap: 30px;
+            flex-direction: column;
+            margin: 10px;
+            border-radius: 15px;
+            font-family: $ffpoppin;
+            i {
+                color: $horange;
+            }
+            span {
+                @include ttsize;
+            }
+            p {
+                @include body-copy;
+                text-align: center;
+                
+            }
+        }
+    }
+  
+
+}
+
+#form {
+    width: 90%;
+    padding: 0.8em;
+    border-radius: 10px;
+    @include flex-center;
+    flex-direction: column;
+    font-family: $ffpoppin;
+    h6 {
+        width: 200px;
+        color: $twhite;
+        text-align: center;
+        text-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    #myform {
+        text-align: left;
+        button {
+            background-color: $hblue;
+            border-radius: 5px;
+            border: none;
+            font-family: $ffpoppin;
+        }
+    }
+}
+
+
+
+/* footer */ 
+footer { 
+    padding: $pmed;
+    text-align: center;
+    background: hsl(17, 100%, 78%);
+    color: $horange;
+    font-family: $ffpoppin;
+
+    input {
+        border-radius: 10px;
+        border-color: white;
+        margin-bottom: 15px;
+    }
+
+    a {
+        color: $horange;
+        text-decoration: none;
+
+        &:hover {
+            color: $horange;
+        }
+    }
+}
+.footer-logo {
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+    vertical-align: middle;
+}
+.footer-social-links {
+    padding: $psmall;
+    line-height: 2em;
+}
+.footer-social-links a {
+    margin: 0 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.footer-social-links a span {
+    display: none;
+}
+#footer-copyright {
+    padding: $psmall;
+    font-size: 12px;
+    color: $twhite;
+}
+
+
+@media only screen and (min-width: 750px) {
+    .container {
+        width: 90%;
+    }
+     
+    header {  
+        #burger-menu {
+            display: none;
+        }
+        nav {
+            @include flex-center(column, wrap);
+            max-width: 1000px;
+            margin:  auto;
+            height: 60px;
+            ul {
+                @include flex-center;
+    
+                li {
+                    margin: 0 1.5em;
+                    position: relative;
+                    line-height: 24px;
+    
+                    a {
+                        font-family: $ffpoppin;
+                        color: $twhite;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        font-weight: $fmedium;
+                        text-decoration: none;
+    
+                        &:hover {
+                            color: $hblue;
+                            font-weight: $flarge;
+                        }
+                    }
+                }
+            }
+        }
+        .top-logo { 
+            a {
+                img{
+                    width: 300px;
+                }
+            }
+        }
+    }
+    main {
+        /*offer section*/
+        #offer-section {
+            width: 50vw;
+            padding: 10rem 0rem;
+            article {
+                width: 100vw;
+                h1 {
+                    width: 51vw;
+                    @include ttsize-w;
+                }
+                p{
+                    @include body-copy-w;
+                }
+            }
+
+        }
+        /*gradient canvas*/
+        .gradient-container{
+            height: 100vh;
+        }
+
+        .glide {
+            width: 80vw;
+
+            .glide__slides {
+                width: 100%;
+
+                .glide__slide{
+                    img{
+                        width: 100%;
+                        max-width: 1000px;
+                    }
+                    figcaption{
+                        @include body-copy-w;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        
+        #testimonial {
+            padding: $pmed;
+            @include flex-center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            h3 {
+                font-size: 2em;
+                width: 90%;
+                text-align: center;
+            }
+            figure { 
+                flex-direction: column;
+                width: 37vw;
+                #customer-img {
+                    width: 85%;
+                    max-width: 400px;
+                    border-radius: 10px;
+                    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+            
+            
+                }
+                figcaption {
+                    @include body-copy-w;
+
+                }
+    
+            }
+
+            #test-text {
+                width: 55vw;
+                h4 {
+                    font-size: 1.7em;
+                    text-wrap: wrap;
+                }
+                p {
+                    width: 90%;
+                    @include body-copy-w;
+                    text-align:left;
+                    
+                }
+                p::first-letter {
+                    font-size: 30px;
+                }
+
+                ul {
+                    width: 20%;
+                    margin: 0;
+                    li {
+                        i{
+                            font-size: 2em;
+                            margin-top: 30px;
+                        }
+
+                    }
+                }
+
+    
+            }
+          
+        }
+        #perks {
+            height: 100vh;
+            border-bottom: $hblue 2px solid;
+            h5 {
+                @include ttsize-w;
+            }
+        }
+
+        #destination-map {
+            height: 100vh;
+            color: green;
+            flex-direction: row-reverse;
+            div {
+                h2{
+                    @include ttsize-w;
+                    padding: 0.5em 1em;
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;   
+                }
+            }
+            #map {
+                height: 80vh;
+                width: 50vw;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            }
+        }
+    }
+
+
+
+
+    /* footer */
+    .footer-social-links a {
+        margin: 0 28px;
+    }
+    .footer-social-links i {
+        margin-right: 5px;
+    }
+    .footer-social-links a span {
+        display: inline;
+        font-size: 11px;
+    }
+}
+
+#map {
+    height: 40vh;
+    width: 90vw;
+}

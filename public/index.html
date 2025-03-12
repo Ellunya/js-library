@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Js Libraries</title>
+
+        <!--css reset-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css" />
+        <!-- js library stylesheet leaflet-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <!-- js library glide -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+        <!--js libary AOS scroll animations-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+        <!--fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <!--css external styesheet-->
+        <link rel="stylesheet" href="/assets/css/stylesheet.css" />
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/eaa8224636.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <nav id="burger-menu">
+                    <i class="fa-solid fa-bars fa-lg"></i>
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                        <i class="fa-regular fa-map fa-lg"></i>
+                    </div>
+                </nav>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li class="current-menu-item"><a href="#">Locations</a></li>
+                        <li><a href="#">Deals</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Your account</a></li>
+                        <li><i class="fa-solid fa-magnifying-glass fa-md"></i></li>
+                    </ul>
+                </nav>
+
+                <div class="top-logo" data-aos="fade-down">
+                    <a href="/" id="headerlogo"><img src="/assets/images/logo.png" alt="SunsetView Logo"></a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Offer Section -->
+            <section id="offer-section" class="container">
+                <article>
+                    <h1 data-aos="fade-right">
+                        Why Choose <span>SunsetView</span> for Your Next Getaway?
+                    </h1>
+                    <p data-aos="fade-right">
+                        We believe travel is more than just a trip, it’s an experience. Whether you're dreaming of a
+                        relaxing beach retreat, an adventurous mountain escape, or an immersive city tour, we make planning
+                        effortless and exciting. Our curated selection of breathtaking destinations ensures you find the
+                        perfect place to unwind and explore.
+                    </p>
+                </article>
+            </section>
+
+            <!-- Granim.js Gradient Section -->
+            <section data-aos="fade-up" class="gradient-container">
+                <canvas id="gradient-canvas"></canvas>
+                <dotlottie-player class="lottie-animation"
+                    src="https://lottie.host/ec91c890-ac87-4d5a-bdfc-cde11f6c97a0/J9soln4n8B.lottie"
+                    background="transparent" speed="1" direction="1" playMode="forward" loop autoplay>
+                </dotlottie-player>
+                <h2 class="gradient-text">Our Top Destinations</h2>
+            </section>
+
+            <!-- Glide.js Carousel Section -->
+            <section data-aos="fade-up" class="glide">
+                <figure class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <img src="/assets/images/perulocation.jpeg" alt="Peru">
+                            <figcaption>Peru</figcaption>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="/assets/images/japanlocation.jpeg" alt="Japan">
+                            <figcaption>Japan</figcaption>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="/assets/images/parislocation.jpeg" alt="France">
+                            <figcaption>France</figcaption>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="/assets/images/greecelocation.jpeg" alt="Greece">
+                            <figcaption>Greece</figcaption>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="/assets/images/canadalocation.jpeg" alt="Canada">
+                            <figcaption>Canada</figcaption>
+                        </li>
+                        <li class="glide__slide">
+                            <img src="/assets/images/finlandlocation.jpeg" alt="Suomi">
+                            <figcaption>Suomi</figcaption>
+                        </li>
+                    </ul>
+                </figure>
+
+                <!-- Glide Navigation -->
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">❮</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">❯</button>
+                </div>
+            </section>
+
+            <!-- Customer Testimonial Section -->
+            <section id="testimonial">
+                <h3><span>Customer</span> Testimonial</h3>
+                <figure>
+                    <img id="customer-img" src="/assets/images/customerreview.jpeg" alt="John & Maddie">
+                    <figcaption>John & Maddie, Peru 2024</figcaption>
+                </figure>
+                <article id="test-text">
+                    <h4 data-aos="fade-right">
+                        "<span>SunsetView</span> made our dream vacation a reality!"
+                    </h4>
+                    <ul data-aos="fade-right" id="stars">
+                        <li><i class="fa-solid fa-star fa-lg"></i></li>
+                        <li><i class="fa-solid fa-star fa-lg"></i></li>
+                        <li><i class="fa-solid fa-star fa-lg"></i></li>
+                        <li><i class="fa-solid fa-star-half-stroke fa-lg"></i></li>
+                    </ul>
+                    <p data-aos="fade-right">
+                        From the seamless booking process to the breathtaking destinations, every detail was handled with
+                        care. We can't wait to plan our next adventure with SunsetView!
+                    </p>
+                </article>
+            </section>
+
+            <!-- Perks Section -->
+            <section class="container" id="perks">
+                <h5>What We Offer</h5>
+                <div>
+                    <figure class="perk-container" data-aos="fade-right">
+                        <i class="fa-solid fa-tags fa-xl"></i>
+                        <p><span>Discounts & Deals</span><br>Exclusive travel discounts</p>
+                    </figure>
+                    <figure class="perk-container" data-aos="fade-right">
+                        <i class="fa-solid fa-hospital fa-xl"></i>
+                        <p><span>Travel Insurance</span><br>Packages starting at $99.99</p>
+                    </figure>
+                    <figure class="perk-container" data-aos="fade-right">
+                        <i class="fa-solid fa-headset fa-xl"></i>
+                        <p><span>24/7 Customer Support</span><br>Help anytime, anywhere</p>
+                    </figure>
+                    <figure class="perk-container" data-aos="fade-right">
+                        <i class="fa-solid fa-coins fa-xl"></i>
+                        <p><span>Currency Exchange</span><br>Easy exchange at your destination</p>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Destination Map Section -->
+            <article class="container" id="destination-map">
+                <p id="m-text">Other Destinations</p>
+                <div id="map" data-aos="fade-up"></div>
+            </article>
+        </main>
+
+        <footer id="footer">
+            <div class="container">
+                <!-- Newsletter Form -->
+                <section id="form">
+                    <h6>Sign up to our newsletter for amazing deals</h6>
+                    <form id="myform" data-parsley-validate>
+                        <label for="name">Name*</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </section>
+
+                <!-- Social Media Links -->
+                <div class="footer-social-links">
+                    <a href="#" target="_blank"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+                    <a href="#" target="_blank"><i class="fa fa-pinterest"></i><span>Pinterest</span></a>
+                    <a href="#" target="_blank"><i class="fa fa-instagram"></i><span>Instagram</span></a>
+                    <a href="#" target="_blank"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+                    <a href="#" target="_blank"><i class="fa fa-youtube-play"></i><span>Youtube</span></a>
+                </div>
+
+                <div id="footer-copyright">
+                    &copy; 2025 SunsetView - All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </body>
+
+        <!--jquery ( !keep on top to load first and make sure no issues happen!)-->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <!--AOS text animations-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <!--leaflet-->
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <!--parsley-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"></script>
+        <!--glide.js-->
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+        <!--granim gradient js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.min.js"></script>
+        <!--lottie animations-->
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+        <!--main js-->
+        <script src="/assets/js/main.js"></script>
+    </body>
+
+</html>

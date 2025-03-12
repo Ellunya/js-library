@@ -1,0 +1,622 @@
+/* font families*/
+/* font weight*/
+/* text title size mobile*/
+/* text tile size web*/
+/* body copy size mobile*/
+/* body copy size web*/
+.container {
+  width: 94%;
+  margin: 0 auto;
+  padding-bottom: 3em;
+}
+
+/* header and main nav */
+header {
+  background-image: url(/assets/images/headerimg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 15em;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+header #burger-menu {
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em 1em 1em 1em;
+}
+header #burger-menu div i {
+  margin-left: 15px;
+}
+header nav ul {
+  display: none;
+}
+header .top-logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+header .top-logo a img {
+  padding: 5em 0;
+  margin-top: 10em;
+  width: 60vw;
+}
+
+main {
+  width: 100%;
+}
+main #destination-map {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+main #destination-map div {
+  justify-content: center;
+  align-items: center;
+}
+main #destination-map p {
+  background-color: #c05037;
+  padding: 10px 7px;
+  font-size: 20px;
+  text-align: left;
+  margin: 0px 0px 30px 0px;
+  line-height: 1.4;
+  border-radius: 15px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #ffffff;
+}
+main #destination-map #map {
+  height: 40vh;
+  width: 85vw;
+  border-radius: 15px;
+}
+main input.parsley-error {
+  border: 2px solid red;
+}
+main input.parsley-success {
+  border: 2px solid green;
+}
+main .parsley-errors-list {
+  color: red;
+  font-size: 14px;
+}
+main .glide {
+  width: 80%;
+  margin: auto;
+  padding: 0 0 5em 0;
+}
+main .glide__slides {
+  text-align: center;
+}
+main .glide__slide img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+main .glide__slide figcaption {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 10px;
+}
+main .glide__arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+main .glide__arrow {
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 5px;
+}
+main .glide__arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* offer section */
+#offer-section {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#offer-section article {
+  width: 80%;
+  font-family: "Poppins", sans-serif;
+  margin: 0px 0px 30px 0px;
+  line-height: 1.4;
+}
+#offer-section article h1 {
+  font-size: 20px;
+  text-align: left;
+  margin: 0px 0px 30px 0px;
+  line-height: 1.4;
+}
+#offer-section article span {
+  color: #c05037;
+  font-weight: 400;
+}
+#offer-section article p {
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+#offer-section article p::first-letter {
+  font-size: 18px;
+}
+
+/*granim gradient*/
+/* Style for full-page gradient background */
+.gradient-container {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Full viewport height */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* full size canvas */
+#gradient-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  opacity: 50%;
+  z-index: -1; /* Sends canvas behind text  :P*/
+}
+
+/* gradient canvas text */
+.gradient-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-wrap: wrap;
+  font-size: 3rem; /* Adjust text size */
+  font-weight: 400;
+  line-height: 1.3;
+  font-family: "Playfair Display", serif;
+  color: #ffffff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+}
+
+.lottie-animation {
+  top: 90%;
+  left: 50%;
+  height: 80%;
+}
+
+/*testimonial section*/
+#testimonial {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(255, 216, 143, 0.1921568627);
+  width: 100vw;
+  height: 100vh;
+  border-bottom: solid 2px #35c4ce;
+}
+#testimonial h3 {
+  font-size: 20px;
+  text-align: left;
+  margin: 0px 0px 30px 0px;
+  line-height: 1.4;
+  font-family: "Poppins", sans-serif;
+}
+#testimonial h3 span {
+  color: #c05037;
+}
+#testimonial figure {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#testimonial figure #customer-img {
+  width: 85%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+#testimonial figure figcaption {
+  font-family: "Playfair Display", serif;
+  font-size: 0.8rem;
+  margin: 15px 0px;
+  font-style: italic;
+}
+#testimonial figure #test-text {
+  padding-top: 30px;
+}
+#testimonial figure #test-text h4 {
+  font-size: 20px;
+  text-align: left;
+  margin: 0px 0px 30px 0px;
+  line-height: 1.4;
+}
+#testimonial article {
+  width: 80%;
+  font-family: "Poppins", sans-serif;
+  margin: 0px 0px 30px 0px;
+  line-height: 1.4;
+}
+#testimonial article h1 {
+  font-size: 20px;
+  text-align: left;
+  margin: 0px 0px 30px 0px;
+  line-height: 1.4;
+}
+#testimonial article span {
+  color: #c05037;
+  font-weight: 400;
+}
+#testimonial article p {
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+#testimonial article p::first-letter {
+  font-size: 18px;
+}
+#testimonial article #stars {
+  width: 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 4% 0 0 18%;
+  color: #35c4ce;
+}
+#testimonial article #stars li {
+  margin-right: 5px;
+}
+
+#perks {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+#perks h5 {
+  font-size: 20px;
+  text-align: left;
+  margin: 0px 0px 30px 0px;
+  line-height: 1.4;
+  font-family: "Poppins", sans-serif;
+}
+#perks div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#perks div .perk-container {
+  width: 10rem;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  padding: 1rem;
+  height: 16rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  flex-direction: column;
+  margin: 10px;
+  border-radius: 15px;
+  font-family: "Poppins", sans-serif;
+}
+#perks div .perk-container i {
+  color: #c05037;
+}
+#perks div .perk-container span {
+  font-size: 20px;
+  text-align: left;
+  margin: 0px 0px 30px 0px;
+  line-height: 1.4;
+}
+#perks div .perk-container p {
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.6;
+  text-align: center;
+}
+
+#form {
+  width: 90%;
+  padding: 0.8em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+#form h6 {
+  width: 200px;
+  color: #ffffff;
+  text-align: center;
+  text-wrap: wrap;
+  margin-bottom: 20px;
+}
+#form #myform {
+  text-align: left;
+}
+#form #myform button {
+  background-color: #35c4ce;
+  border-radius: 5px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+
+/* footer */
+footer {
+  padding: 30px 0;
+  text-align: center;
+  background: hsl(17, 100%, 78%);
+  color: #c05037;
+  font-family: "Poppins", sans-serif;
+}
+footer input {
+  border-radius: 10px;
+  border-color: white;
+  margin-bottom: 15px;
+}
+footer a {
+  color: #c05037;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #c05037;
+}
+
+.footer-logo {
+  width: 200px;
+  margin: 20px auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.footer-social-links {
+  padding: 20px 0;
+  line-height: 2em;
+}
+
+.footer-social-links a {
+  margin: 0 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.footer-social-links a span {
+  display: none;
+}
+
+#footer-copyright {
+  padding: 20px 0;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 750px) {
+  .container {
+    width: 90%;
+  }
+  header #burger-menu {
+    display: none;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    height: 60px;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul li {
+    margin: 0 1.5em;
+    position: relative;
+    line-height: 24px;
+  }
+  header nav ul li a {
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  header nav ul li a:hover {
+    color: #35c4ce;
+    font-weight: 900;
+  }
+  header .top-logo a img {
+    width: 300px;
+  }
+  main {
+    /*offer section*/
+    /*gradient canvas*/
+  }
+  main #offer-section {
+    width: 50vw;
+    padding: 10rem 0rem;
+  }
+  main #offer-section article {
+    width: 100vw;
+  }
+  main #offer-section article h1 {
+    width: 51vw;
+    font-size: 30px;
+    text-align: left;
+  }
+  main #offer-section article p {
+    font-size: 18px;
+    text-align: justify;
+  }
+  main .gradient-container {
+    height: 100vh;
+  }
+  main .glide {
+    width: 80vw;
+  }
+  main .glide .glide__slides {
+    width: 100%;
+  }
+  main .glide .glide__slides .glide__slide img {
+    width: 100%;
+    max-width: 1000px;
+  }
+  main .glide .glide__slides .glide__slide figcaption {
+    font-size: 18px;
+    text-align: justify;
+    text-align: center;
+  }
+  main #testimonial {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  main #testimonial h3 {
+    font-size: 2em;
+    width: 90%;
+    text-align: center;
+  }
+  main #testimonial figure {
+    flex-direction: column;
+    width: 37vw;
+  }
+  main #testimonial figure #customer-img {
+    width: 85%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  }
+  main #testimonial figure figcaption {
+    font-size: 18px;
+    text-align: justify;
+  }
+  main #testimonial #test-text {
+    width: 55vw;
+  }
+  main #testimonial #test-text h4 {
+    font-size: 1.7em;
+    text-wrap: wrap;
+  }
+  main #testimonial #test-text p {
+    width: 90%;
+    font-size: 18px;
+    text-align: justify;
+    text-align: left;
+  }
+  main #testimonial #test-text p::first-letter {
+    font-size: 30px;
+  }
+  main #testimonial #test-text ul {
+    width: 20%;
+    margin: 0;
+  }
+  main #testimonial #test-text ul li i {
+    font-size: 2em;
+    margin-top: 30px;
+  }
+  main #perks {
+    height: 100vh;
+    border-bottom: #35c4ce 2px solid;
+  }
+  main #perks h5 {
+    font-size: 30px;
+    text-align: left;
+  }
+  main #destination-map {
+    height: 100vh;
+    color: green;
+    flex-direction: row-reverse;
+  }
+  main #destination-map div h2 {
+    font-size: 30px;
+    text-align: left;
+    padding: 0.5em 1em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+  main #destination-map #map {
+    height: 80vh;
+    width: 50vw;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+  /* footer */
+  .footer-social-links a {
+    margin: 0 28px;
+  }
+  .footer-social-links i {
+    margin-right: 5px;
+  }
+  .footer-social-links a span {
+    display: inline;
+    font-size: 11px;
+  }
+}
+#map {
+  height: 40vh;
+  width: 90vw;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
